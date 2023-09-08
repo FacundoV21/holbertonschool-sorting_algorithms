@@ -1,5 +1,3 @@
-Best-case O(n) 
-
-Average O(n^{2})
-
-Worst-case space O(n)
+(n)
+O(n^{2})
+O(n)
