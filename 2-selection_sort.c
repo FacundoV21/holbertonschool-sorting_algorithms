@@ -18,9 +18,9 @@ selection_sort(int *array, size_t size)
 		}
 		if (n != i)
 		{
-			x = &array[i];
-			&array[i] = &array[n];
-			&array[n] = x;
+			x = array[i];
+			array[i] = array[n];
+			array[n] = x;
 			print_array(array, size);
 		}
 	}
