@@ -2,6 +2,8 @@
 
 /**
  * swap - swap elements of an array
+ * * @array: array of integer
+ * @size: size of an array
  * @a: int
  * @b: int
  */
@@ -15,7 +17,6 @@ void swap(int *array, size_t size, int *a, int *b)
 		aux = *a;
 		*a = *b;
 		*b = aux;
-		
 		print_array(array, size);
 	}
 }
