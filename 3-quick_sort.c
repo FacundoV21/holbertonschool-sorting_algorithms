@@ -8,13 +8,16 @@
 
 void swap(int *array, size_t size, int *a, int *b)
 {
-	int aux;
+	if (a != b)
+	{
+		int aux;
 
-	aux = *a;
-	*a = *b;
-	*b = aux;
-	
-	print_array(array, size);
+		aux = *a;
+		*a = *b;
+		*b = aux;
+		
+		print_array(array, size);
+	}
 }
 
 /**
