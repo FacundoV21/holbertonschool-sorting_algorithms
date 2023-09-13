@@ -6,13 +6,15 @@
  * @b: int
  */
 
-void swap(int *a, int *b)
+void swap(int *array, size_t size, int *a, int *b)
 {
 	int aux;
 
 	aux = *a;
 	*a = *b;
 	*b = aux;
+	
+	print_array(array, size);
 }
 
 /**
@@ -35,16 +37,10 @@ int partition(int *array, int min, int max, size_t size)
 		if (array[i] <= piv)
 		{
 			j++;
-			swap(&array[i], &array[j]);
+			swap(array, size, &array[i], &array[j]);
 		}
 	}
-	if (min != 0)
-		print_array(array, size);
-
-	swap(&array[j + 1], &array[max]);
-
-	if (min == 0)
-		print_array(array, size);
+	swap(array, size, &array[j + 1], &array[max]);
 	return (j + 1);
 }
 
@@ -79,5 +75,4 @@ void quick_sort(int *array, size_t size)
 	if (!array || size == 0)
 		return;
 	quick_recursive(array, 0, size - 1, size);
-	print_array(array, size);
 }
